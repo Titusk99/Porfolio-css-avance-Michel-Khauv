@@ -1,0 +1,18 @@
+$dodgerblue: dodgerblue;
+$rebeccapurple: rebeccapurple;
+$rosybrown: rosybrown;
+$lightgreen: lightgreen;
+$grey : grey;
+
+$font-family: sans-serif;
+
+$margin: 0;
+$padding: 0;
+
+@mixin hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

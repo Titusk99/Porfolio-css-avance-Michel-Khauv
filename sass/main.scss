@@ -1,0 +1,381 @@
+@import 'couleurEtStyle';
+body {
+    margin: $margin;
+    padding:$padding;
+    font-family:$font-family;
+    overflow-y: hidden;
+  }
+  
+  .header {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  .image {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: $dodgerblue;
+    font-size: 1rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+transform: translateY(-5px);
+    }
+}
+  
+  .blocHorizontal {
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+  }
+  
+  .container {
+    margin-top: 60px;
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-x: auto;
+    scrollbar-width: hidden;
+    @include hide-scrollbar;
+  }
+  
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+
+  .un {
+    position: relative;
+    overflow: hidden;
+
+    .gif-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .welcome-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.deux {
+    background-color: $rebeccapurple;
+    font-size: 1rem; 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  
+    .gif-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    
+    .compact-skills {
+      width: 80%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      z-index: 2;
+
+      .main-title {
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    }
+  
+    .skills-row {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  
+    .skill-card {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      min-width: 250px;
+  
+h2 {
+color: $rebeccapurple;
+margin-bottom: 1rem;
+font-size: 1.3rem;
+text-align: center;
+      }
+  
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+font-size: 0.9rem;
+  
+li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+  
+  }
+}
+}
+    }
+  
+
+.trois {
+background-color: $rosybrown;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 1rem;
+box-sizing: border-box;
+position: relative;
+overflow: hidden;
+
+.gif-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.5; // Ajustez selon besoin
+}
+    
+.experience-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 1rem;
+    z-index: 2;
+    position: relative;
+    
+.experience-card {
+background: rgba(255, 255, 255, 0.9);
+padding: 2rem;
+border-radius: 15px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+margin: 0 auto;
+width: 100%;
+box-sizing: border-box;
+    
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
+    
+h3 {
+    color: $rebeccapurple;
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+}
+    
+.duration {
+    font-size: 1rem;
+    color: $grey;
+}
+    
+.details {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    line-height: 1.5;
+}
+    
+.Responsabilite {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-left: 3px solid $rebeccapurple;
+    background: white;
+    border-radius: 5px;
+    white-space: pre-line;
+    }
+}
+}
+
+}
+.quatre {
+    background-color: $lightgreen;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contact-container {
+        display: flex;
+        gap: 3rem;
+        width: 100%;
+        max-width: 1200px;
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+    }
+
+    .studies-column,
+    .contact-column {
+        flex: 1;
+        padding: 1.5rem;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .study-card {
+        background: rgba($lightgreen, 0.1);
+        padding: 1.2rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        
+        h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .study-duration {
+            color: $grey;
+            font-size: 0.9rem;
+        }
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+            gap: 2rem;
+            padding: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}
+.quatre {
+    background-color: $lightgreen;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .contact-container {
+        display: flex;
+        gap: 3rem;
+        width: 100%;
+        max-width: 1200px;
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .studies-column,
+    .contact-column {
+        flex: 1;
+        padding: 1.5rem;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .study-card {
+        background: rgba($lightgreen, 0.1);
+        padding: 1.2rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        
+        h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .study-duration {
+            color: $grey;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+    }
+}
